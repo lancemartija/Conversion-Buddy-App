@@ -26,6 +26,8 @@ namespace conversion_buddy_app
             statusMessage.Text = App.NotesRepo.StatusMessage;
 
             DisplayList();
+
+            newNotes.Text = "";
         }
         public async void OnDeleteButtonClicked(object sender, EventArgs args)
         {
