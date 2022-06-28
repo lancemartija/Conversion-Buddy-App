@@ -21,12 +21,12 @@ namespace conversion_buddy_app
 
         private double Convert_KGToLB(double value)
         {
-            return Math.Round(value / WEIGHT_UNIT, 4);
+            return Math.Round(value * WEIGHT_UNIT, 4);
         }
 
         private double Convert_LBToKG(double value)
         {
-            return Math.Round(value * WEIGHT_UNIT, 4);
+            return Math.Round(value / WEIGHT_UNIT, 4);
         }
 
         private void Entry_TextChanged(object sender, TextChangedEventArgs e)
