@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="conversion_buddy_app.About">
+
+    <ScrollView>
+        <StackLayout>
+            <Frame BackgroundColor="#9bc1bc"
+                   Padding="24"
+                   CornerRadius="0">
+                <FlexLayout AlignItems="center"
+                            JustifyContent="Center">
+                    <Image Source="about"
+                           HeightRequest="40"
+                           Margin="0,0,8,0"/>
+                    <Label Text="About"
+                           HorizontalTextAlignment="Center"
+                           TextColor="#000000"
+                           FontSize="30"/>
+                </FlexLayout>
+            </Frame>
+
+            <StackLayout Orientation="Horizontal"
+                         Margin="16">
+                <Image Source="currency"
+                       HeightRequest="60"
+                       Margin="0,0,16,0"/>
+                <StackLayout>
+                    <Label Text="Currency Converter"
+                           TextColor="#1c1c1c"
+                           FontSize="Large"
+                           FontAttributes="Bold"/>
+                    <Label Text="Allows for the quick conversion of foreign currencie into the Philippine Peso (PHP)."
+                           TextColor="#1c1c1c"
+                           LineHeight="1.15"
+                           FontSize="Body"/>
+                </StackLayout>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal"
+                         Margin="16">
+                <Image Source="frequency"
+                       HeightRequest="60"
+                       Margin="0,0,16,0"/>
+                <StackLayout>
+                    <Label Text="Frequency Converter"
+                           TextColor="#1c1c1c"
+                           FontSize="Large"
+                           FontAttributes="Bold"/>
+                    <Label Text="Calculates the equivalent frequency in different hertz ranges."
+                           TextColor="#1c1c1c"
+                           LineHeight="1.15"
+                           FontSize="Body"/>
+                </StackLayout>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal"
+                         Margin="16">
+                <Image Source="thermometer"
+                       HeightRequest="60"
+                       Margin="0,0,16,0"/>
+                <StackLayout>
+                    <Label Text="Temperature Converter"
+                           TextColor="#1c1c1c"
+                           FontSize="Large"
+                           FontAttributes="Bold"/>
+                    <Label Text="Converts the measurement units of the temperature recorded in a particular unit."
+                           TextColor="#1c1c1c"
+                           LineHeight="1.15"
+                           FontSize="Body"/>
+                </StackLayout>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal"
+                         Margin="16">
+                <Image Source="BMI"
+                       HeightRequest="60"
+                       Margin="0,0,16,0"/>
+                <StackLayout>
+                    <Label Text="Body Mass Index"
+                           TextColor="#1c1c1c"
+                           FontSize="Large"
+                           FontAttributes="Bold"/>
+                    <Label Text="Calculates the body mass index using a person's height and weight."
+                           TextColor="#1c1c1c"
+                           LineHeight="1.15"
+                           FontSize="Body"/>
+                </StackLayout>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal"
+                         Margin="16">
+                <Image Source="weight"
+                       HeightRequest="60"
+                       Margin="0,0,16,0"/>
+                <StackLayout>
+                    <Label Text="Weight Converter"
+                           TextColor="#1c1c1c"
+                           FontSize="Large"
+                           FontAttributes="Bold"/>
+                    <Label Text="Converter for units including Kilograms to Pounds and vice-versa."
+                           TextColor="#1c1c1c"
+                           LineHeight="1.15"
+                           FontSize="Body"/>
+                </StackLayout>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal"
+                         Margin="16">
+                <Image Source="length"
+                       HeightRequest="60"
+                       Margin="0,0,16,0"/>
+                <StackLayout>
+                    <Label Text="Length Converter"
+                           TextColor="#1c1c1c"
+                           FontSize="Large"
+                           FontAttributes="Bold"/>
+                    <Label Text="Converter for units including Feet to Centimeters and vice-versa."
+                           TextColor="#1c1c1c"
+                           LineHeight="1.15"
+                           FontSize="Body"/>
+                </StackLayout>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal"
+                         Margin="16">
+                <Image Source="list"
+                       HeightRequest="60"
+                       Margin="0,0,16,0"/>
+                <StackLayout>
+                    <Label Text="Notes"
+                           TextColor="#1c1c1c"
+                           FontSize="Large"
+                           FontAttributes="Bold"/>
+                    <Label Text="Organize with your lists to find everything you need quickly."
+                           TextColor="#1c1c1c"
+                           LineHeight="1.15"
+                           FontSize="Body"/>
+                </StackLayout>
+            </StackLayout>
+
+            <Button Text="Go Back"
+                    TextColor="#ffffff"
+                    CornerRadius="6"
+                    Clicked="GoBack"
+                    BackgroundColor="#000000"
+                    Margin="16,16,16,32"/>
+        </StackLayout>
+    </ScrollView>
+    
+</ContentPage>

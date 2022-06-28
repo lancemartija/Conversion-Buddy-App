@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="conversion_buddy_app.BMI">
+
+    <ScrollView>
+        <StackLayout>
+            <Frame BackgroundColor="#fec89a"
+                   Padding="24"
+                   CornerRadius="0">
+                <FlexLayout AlignItems="center"
+                            JustifyContent="Center">
+                    <Image Source="bmi"
+                           HeightRequest="40"
+                           Margin="0,0,8,0"/>
+                    <Label Text="BMI"
+                           HorizontalTextAlignment="Center"
+                           TextColor="#000000"
+                           FontSize="30"/>
+                </FlexLayout>
+            </Frame>
+
+            <Label Text="Weight"
+                   TextColor="#000000"
+                   FontSize="Large"
+                   FontAttributes="Bold"
+                   Margin="16,16,16,0"/>
+
+            <Frame Padding="24"
+                   CornerRadius="10">
+                <Frame.Margin>
+                    <OnPlatform x:TypeArguments="Thickness"
+                                Android="16,0,16,0"/>
+                </Frame.Margin>
+
+                <StackLayout>
+                    <FlexLayout AlignItems="Center"
+                                JustifyContent="SpaceBetween">
+                        <Label Text="Kilogram (kg)"
+                               TextColor="#000000"
+                               FontSize="Body"/>
+                        <StackLayout Orientation="Horizontal">
+                            <FlexLayout AlignItems="Center"
+                                        JustifyContent="SpaceBetween">
+                                <Label Text=">"
+                                       TextColor="#000000"
+                                       FontSize="Body"
+                                       Margin="0,0,16,0"/>
+                                <Entry x:Name="WeightEntry"
+                                       Placeholder="0"
+                                       Keyboard="Numeric"
+                                       HorizontalOptions="FillAndExpand"
+                                       WidthRequest="120"/>
+                            </FlexLayout>
+                        </StackLayout>
+                    </FlexLayout>
+                </StackLayout>
+            </Frame>
+
+            <Label Text="Height"
+                   TextColor="#000000"
+                   FontSize="Large"
+                   FontAttributes="Bold"
+                   Margin="16,16,16,0"/>
+
+            <Frame Padding="24"
+                   CornerRadius="10">
+                <Frame.Margin>
+                    <OnPlatform x:TypeArguments="Thickness"
+                                Android="16,0,16,0"/>
+                </Frame.Margin>
+
+                <StackLayout>
+                    <FlexLayout AlignItems="Center"
+                                JustifyContent="SpaceBetween">
+                        <Label Text="Centimeter (cm)"
+                               TextColor="#000000"
+                               FontSize="Body"/>
+                        <StackLayout Orientation="Horizontal">
+                            <FlexLayout AlignItems="Center"
+                                        JustifyContent="SpaceBetween">
+                                <Label Text=">"
+                                       TextColor="#000000"
+                                       FontSize="Body"
+                                       Margin="0,0,16,0"/>
+                                <Entry x:Name="HeightEntry"
+                                       Placeholder="0"
+                                       Keyboard="Numeric"
+                                       HorizontalOptions="FillAndExpand"
+                                       WidthRequest="120"/>
+                            </FlexLayout>
+                        </StackLayout>
+                    </FlexLayout>
+                </StackLayout>
+            </Frame>
+
+            <Button Text="Compute"
+                    TextColor="#000000"
+                    CornerRadius="6"
+                    Clicked="Compute_BMI"
+                    Margin="16"
+                    BackgroundColor="#adb5bd"/>
+
+            <Label Text="Result"
+                   TextColor="#000000"
+                   FontSize="Large"
+                   FontAttributes="Bold"
+                   Margin="16,16,16,0"/>
+
+            <Frame Padding="24"
+                   CornerRadius="10">
+                <Frame.Margin>
+                    <OnPlatform x:TypeArguments="Thickness"
+                                Android="16,0,16,16"/>
+                </Frame.Margin>
+                <StackLayout HorizontalOptions="Center">
+                    <Label Text="Your BMI:"
+                           TextColor="#000000"
+                           FontSize="Body"
+                           HorizontalTextAlignment="Center"/>
+                    <Label x:Name="BMILabel"
+                           Text="-"
+                           TextColor="#000000"
+                           FontSize="Large"
+                           FontAttributes="Bold"
+                           HorizontalOptions="FillAndExpand"
+                           HorizontalTextAlignment="Center"/>
+                    <Label x:Name="BMIClassLabel"
+                           TextColor="#000000"
+                           FontSize="Small"
+                           FontAttributes="Bold"
+                           HorizontalOptions="FillAndExpand"
+                           HorizontalTextAlignment="Center"/>
+                </StackLayout>
+            </Frame>
+
+            <Button Text="Go Back"
+                    TextColor="#ffffff"
+                    CornerRadius="6"
+                    Clicked="GoBack"
+                    Margin="16"
+                    BackgroundColor="#000000"/>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

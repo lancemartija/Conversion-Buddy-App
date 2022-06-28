@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="conversion_buddy_app.Notes">
+    
+    <ScrollView>
+        <StackLayout>
+            <Frame BackgroundColor="#cdb4db"
+                   Padding="24"
+                   CornerRadius="0">
+                <FlexLayout AlignItems="center"
+                            JustifyContent="Center">
+                    <Image Source="list"
+                           HeightRequest="40"
+                           Margin="0,0,8,0"/>
+                    <Label Text="Notes"
+                           HorizontalTextAlignment="Center"
+                           TextColor="#000000"
+                           FontSize="30"/>
+                </FlexLayout>
+            </Frame>
+
+            <Grid Padding="16,16,16,0"
+                  RowSpacing="1"
+                  ColumnSpacing="1"
+                  BackgroundColor="Default">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Entry x:Name="newNotes"
+                       Placeholder="Add item" />
+
+                <Button Grid.Row="1"
+                        Text="Add Items"
+                        TextColor="#000000"
+                        BackgroundColor="#adb5bd"
+                        CornerRadius="6"
+                        Clicked="OnNewButtonClicked"/>
+
+                <Label x:Name="statusMessage"
+                       Grid.Row="2" />
+            </Grid>
+
+            <Frame Padding="0"
+                   Margin="16,0,16,16">
+                <ListView x:Name="notesList"
+                          HeightRequest="380">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell Height="50">
+                                <FlexLayout AlignItems="Center"
+                                            JustifyContent="SpaceBetween"
+                                            Padding="5,0,5,0">
+                                    <Label Text="{Binding Item}"
+                                            WidthRequest="200"/>
+
+                                    <Frame x:Name="Btn_Signout"
+                                           BackgroundColor="#ff595e"
+                                           CornerRadius="24"
+                                           Padding="0"
+                                           HasShadow="False"
+                                           WidthRequest="80"
+                                           BindingContext="{Binding Id}">
+                                        <Frame.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="OnDeleteButtonClicked"
+                                                                  NumberOfTapsRequired="1"/>
+                                        </Frame.GestureRecognizers>
+
+                                        <Label Text="Delete"
+                                               TextTransform="Uppercase"
+                                               TextColor="#ffffff"
+                                               FontSize="Micro"
+                                               FontAttributes="Bold"
+                                               HorizontalTextAlignment="Center"
+                                               Padding="0,8,0,8"/>
+                                    </Frame>
+                                </FlexLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </Frame>
+
+            <Button Text="Go Back"
+                    TextColor="#ffffff"
+                    CornerRadius="6"
+                    Clicked="GoBack"
+                    BackgroundColor="#000000"
+                    Margin="16,10,16,16"/>
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>

@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="conversion_buddy_app.TemperatureConverter">
+    
+    <StackLayout>
+        <Frame BackgroundColor="#f4a261"
+               Padding="24"
+               CornerRadius="0">
+            <FlexLayout AlignItems="center"
+                        JustifyContent="Center">
+                <Image Source="thermometer"
+                       HeightRequest="40"
+                       Margin="0,0,8,0"/>
+                <Label Text="Temperature"
+                       HorizontalTextAlignment="Center"
+                       TextColor="#000000"
+                       FontSize="30"/>
+            </FlexLayout>
+        </Frame>
+
+        <Frame Padding="24"
+               CornerRadius="10">
+            <Frame.Margin>
+                <OnPlatform x:TypeArguments="Thickness"
+                            Android="16"/>
+            </Frame.Margin>
+            <StackLayout>
+                <FlexLayout AlignItems="Center"
+                            JustifyContent="SpaceBetween">
+                    <Label Text="Celsius (°C)"
+                        TextColor="#000000"
+                        FontSize="Body"/>
+                    <StackLayout Orientation="Horizontal">
+                        <FlexLayout AlignItems="Center"
+                                    JustifyContent="SpaceBetween">
+                            <Label Text=">"
+                                   TextColor="#000000"
+                                   FontSize="Body"
+                                   Margin="0,0,16,0"/>
+                            <Entry x:Name="CelsiusEntry"
+                                   Placeholder="0"
+                                   Keyboard="Numeric"
+                                   HorizontalOptions="FillAndExpand"
+                                   WidthRequest="120"
+                                   TextChanged="Entry_TextChanged"/>
+                        </FlexLayout>
+                    </StackLayout>
+                </FlexLayout>
+                <FlexLayout AlignItems="Center"
+                            JustifyContent="SpaceBetween">
+                    <Label Text="Fahrenheit (°F)"
+                           TextColor="#000000"
+                           FontSize="Body"/>
+                    <StackLayout Orientation="Horizontal">
+                        <FlexLayout AlignItems="Center"
+                                    JustifyContent="SpaceBetween">
+                            <Label Text=">"
+                                   TextColor="#000000"
+                                   FontSize="Body"
+                                   Margin="0,0,16,0"/>
+                            <Entry x:Name="FahrenheitEntry"
+                                   Placeholder="0"
+                                   Keyboard="Numeric"
+                                   HorizontalOptions="FillAndExpand"
+                                   WidthRequest="120"
+                                   TextChanged="Entry_TextChanged"/>
+                        </FlexLayout>
+                    </StackLayout>
+                </FlexLayout>
+                <FlexLayout AlignItems="Center"
+                            JustifyContent="SpaceBetween">
+                    <Label Text="Kelvin (K)"
+                           TextColor="#000000"
+                           FontSize="Body"/>
+                    <StackLayout Orientation="Horizontal">
+                        <FlexLayout AlignItems="Center"
+                                    JustifyContent="SpaceBetween">
+                            <Label Text=">"
+                                   TextColor="#000000"
+                                   FontSize="Body"
+                                   Margin="0,0,16,0"/>
+                            <Entry x:Name="KelvinEntry"
+                                   Placeholder="0"
+                                   Keyboard="Numeric"
+                                   HorizontalOptions="FillAndExpand"
+                                   WidthRequest="120"
+                                   TextChanged="Entry_TextChanged"/>
+                        </FlexLayout>
+                    </StackLayout>
+                </FlexLayout>
+            </StackLayout>
+        </Frame>
+
+        <Button Text="Go Back"
+                TextColor="#ffffff"
+                CornerRadius="6"
+                Clicked="GoBack"
+                Margin="16,10,16,16"
+                BackgroundColor="#000000"/>
+
+    </StackLayout>
+</ContentPage>
