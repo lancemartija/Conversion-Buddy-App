@@ -12,7 +12,7 @@ namespace conversion_buddy_app
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class WeightConverter : ContentPage
     {
-        private const double WEIGHT_UNIT = 2.2;
+        private const double WEIGHT_UNIT = 2.205;
 
         public WeightConverter()
         {
